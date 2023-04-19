@@ -3,7 +3,9 @@ name: Reusable workflow example
 on:
   workflow_call:
     outputs:
-      outputs1-VAR_OLA: ${{ steps.steps_var.outputs.VAR_OLA }}
+      outputs1-VAR_OLA:
+        description: "The first output string"
+        value: ${{ steps.steps_var.outputs.VAR_OLA }}
     #inputs:
       #config-path:
         #required: false
