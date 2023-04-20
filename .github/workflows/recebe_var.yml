@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_call:
     inputs:
-      var_recebe_teset:
+      var_recebe_teste:
         required: true
         type: string
 #       var_recebe_environment:
