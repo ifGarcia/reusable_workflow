@@ -1,0 +1,27 @@
+name: Reusable workflow
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      var_recebe_teset:
+        required: true
+        type: string
+#       var_recebe_environment:
+#         required: true
+#         type: string
+#     secrets:
+#       envPAT:
+#         required: false
+
+jobs:
+  job_set_environment:
+    runs-on: ubuntu-latest
+    #environment: ${{ inputs.var_recebe_environment }}
+
+    steps:
+      - name: Imprime vars
+        run: |
+          echo "${{ inputs.var_recebe_teset }}"    #input passado na chamada
+          echo "${{ secret.VAR_SECRETA_TESTE }}"   #var secreta criada no repo
+          echo "${{ vars.VAR_ACTION }}"            #var normal criada no repo
