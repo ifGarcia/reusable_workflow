@@ -22,6 +22,6 @@ jobs:
     steps:
       - name: Imprime vars
         run: |
-          echo "${{ inputs.var_recebe_teset }}"    #input passado na chamada
+          echo "${{ inputs.var_recebe_teste }}"    #input passado na chamada
           echo "${{ secrets.VAR_SECRETA_TESTE }}"   #var secreta criada no repo
           echo "${{ vars.VAR_ACTION }}"            #var normal criada no repo
