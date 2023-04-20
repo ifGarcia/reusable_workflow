@@ -27,3 +27,4 @@ jobs:
           echo "${{ secrets.VAR_SECRETA_TESTE2 }}" #var secreta criada no repo
           echo "${{ vars.VAR_ACTION }}"            #var normal criada no repo ENVIRONMENT_VAR
           echo "${{ vars.ENVIRONMENT_VAR }}"       #var normal criada no environment dev
+          #TODO testar outro tipo de variavel.
