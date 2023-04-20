@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     
     outputs:
-      output1: ${{ steps.steps_var.outputs.VAR_OLA }}
+      output1: ${{ steps.outputs.VAR_OLA }}
     
     steps:
       - name: Set VAR_OLA
