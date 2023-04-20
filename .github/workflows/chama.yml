@@ -6,8 +6,6 @@ on:
       outputs1-VAR_OLA:
         description: "The first output string"
         value: ${{ jobs.job_teste_vars.outputs.output1 }}
-      outputs2:
-        value: ${{ jobs.job_teste_vars.steps.outputs.output2 }}
     #inputs:
       #config-path:
         #required: false
@@ -24,11 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     
     outputs:
-      output1: ${{ steps.outputs.VAR_OLA }}
-      output2: ${{ steps.outputs.VAR_OLA }}
+      output1: ${{ steps.step_var.outputs.VAR_OLA }}
     
     steps:
       - name: Set VAR_OLA
-        #id: steps_var
+        id: step_var
         run: |
           echo "VAR_OLA=ola" >> $GITHUB_OUTPUT
