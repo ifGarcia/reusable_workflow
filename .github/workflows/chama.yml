@@ -26,6 +26,6 @@ jobs:
     
     steps:
       - name: Set VAR_OLA
-        id: steps_var
+        #id: steps_var
         run: |
           echo "VAR_OLA=ola" >> $GITHUB_OUTPUT
