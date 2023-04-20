@@ -28,5 +28,6 @@ jobs:
           echo "${{ vars.VAR_ACTION }}"             #var normal criada no repo ENVIRONMENT_VAR
           echo "${{ vars.ENVIRONMENT_VAR }}"        #var normal criada no environment dev
           #echo "${{ env.branch }}"                  #env criada no job que chama ----> Não persiste
-          echo "${{ github }}"                      #github
+          echo "${{ github.ref }}"                  #github ref
+          echo "${{ github.repository }}"           #github repository
           #TODO testar outro tipo de variavel.
