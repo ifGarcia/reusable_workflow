@@ -7,9 +7,9 @@ on:
       var_recebe_teste:
         required: true
         type: string
-#       var_recebe_environment:
-#         required: true
-#         type: string
+      var_recebe_environment:
+        required: true
+        type: string
 #     secrets:
 #       envPAT:
 #         required: false
