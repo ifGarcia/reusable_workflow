@@ -6,9 +6,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  job_ubuntu:
+  job_1:
     runs-on: ubuntu-latest
+    name: Sem environment
     #environment: DEV
+    
+    steps:
+    - if: ${{ vars.ENVIRONMENT_NAME }}
+      run: |
+        echo ${{ vars.ENVIRONMENT_NAME }}
+      
+    - if: ${{ vars.ENVIRONMENT_NAME == 0 }}
+      run: |
+        echo "tudo certo 2"
+
+  job_2:
+    runs-on: ubuntu-latest
+    name: Com environment
+    environment: DEV
     
     steps:
 
