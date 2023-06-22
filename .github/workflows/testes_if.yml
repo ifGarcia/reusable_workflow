@@ -1,6 +1,8 @@
 name: if teste
 
 on:
+  push:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -14,6 +16,6 @@ jobs:
       run: |
         echo "tudo certo 1"
       
-    - if: ${{ vars.ENVIRONMENT_NAME! }}
+    - if: ${{ vars.ENVIRONMENT_NAME || 0 }}
       run: |
         echo "tudo certo 2"
