@@ -1,0 +1,19 @@
+name: if teste
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job_ubuntu:
+    runs-on: ubuntu-latest
+    environment: DEV
+    
+    steps:
+
+    - if: ${{ vars.ENVIRONMENT_NAME }}
+      run: |
+        echo "tudo certo 1"
+      
+    - if: ${{ vars.ENVIRONMENT_NAME }}!
+      run: |
+        echo "tudo certo 2"
