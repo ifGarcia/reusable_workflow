@@ -14,7 +14,7 @@ jobs:
 
     - if: ${{ vars.ENVIRONMENT_NAME }}
       run: |
-        echo "tudo certo 1"
+        echo ${{ vars.ENVIRONMENT_NAME }}
       
     - if: ${{ vars.ENVIRONMENT_NAME != 0 }}!
       run: |
